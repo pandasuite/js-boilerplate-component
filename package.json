@@ -21,7 +21,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "pandasuite-bridge": "^4.2.1"
+    "pandasuite-bridge": "^4.2.2"
   },
   "release-it": {
     "github": {
