@@ -1,4 +1,5 @@
 import PandaBridge from 'pandasuite-bridge';
+import './index.css';
 
 let properties = null;
 let markers = null;
