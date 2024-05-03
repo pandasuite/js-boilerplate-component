@@ -1,34 +1,11 @@
-const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const { merge } = require("webpack-merge");
 
-module.exports = {
-  mode: 'development',
+const dev = require("./webpack.config.dev.js");
+
+module.exports = merge(dev, {
+  mode: "production",
   entry: {
-    app: './src/index.js',
+    app: "./src/index.js",
   },
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './build',
-  },
-  plugins: [
-    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'public' },
-      ],
-    }),
-  ],
-  output: {
-    path: path.resolve(__dirname, 'build'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        include: path.resolve(__dirname, 'src'),
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
-      },
-    ],
-  },
-};
+  devtool: "nosources-source-map",
+});

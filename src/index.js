@@ -1,5 +1,5 @@
-import PandaBridge from 'pandasuite-bridge';
-import './index.css';
+import PandaBridge from "pandasuite-bridge";
+import "./index.css";
 
 let properties = null;
 let markers = null;
@@ -14,10 +14,10 @@ PandaBridge.init(() => {
     properties = pandaData.properties;
     markers = pandaData.markers;
 
-    if (document.readyState === 'complete') {
+    if (document.readyState === "complete") {
       myInit();
     } else {
-      document.addEventListener('DOMContentLoaded', myInit, false);
+      document.addEventListener("DOMContentLoaded", myInit, false);
     }
   });
 
@@ -36,9 +36,7 @@ PandaBridge.init(() => {
 
   /* Actions */
 
-  PandaBridge.listen('changeColor', (args) => {
-  });
+  PandaBridge.listen("changeColor", (args) => {});
 
-  PandaBridge.synchronize('synchroImages', (percent) => {
-  });
+  PandaBridge.synchronize("synchroImages", (percent) => {});
 });
