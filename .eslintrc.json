@@ -9,6 +9,17 @@
     "sourceType": "module"
   },
   "rules": {
-    "quotes": ["error", "double"]
+    "quotes": ["error", "double"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/vite.config.js",
+          "**/*.config.js",
+          "**/scripts/**",
+          "**/tests/**"
+        ]
+      }
+    ]
   }
 }
