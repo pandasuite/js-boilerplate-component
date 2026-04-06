@@ -18,7 +18,7 @@
     "postcss": "^8.5.1",
     "release-it": "^19.2.4",
     "tailwindcss": "^3.4.19",
-    "vite": "^7.3.1"
+    "vite": "^7.3.2"
   },
   "dependencies": {
     "pandasuite-bridge": "^5.0.5"
